@@ -1,0 +1,207 @@
+/* =====================================================
+   Basic CSS Components – Explained
+   File: style.ccs  (practice ke liye .ccs extension)
+   ===================================================== */
+
+/* 1️⃣  UNIVERSAL SELECTOR – Sab elements par apply hota hai */
+* {
+  margin: 0;            /* default margin remove */
+  padding: 0;           /* default padding remove */
+  box-sizing: border-box; /* border & padding ko total width me count kare */
+}
+
+/* 2️⃣  ELEMENT SELECTOR – specific HTML tag par */
+body {
+  background-color: #f5f5f5;  /* page ka background */
+  font-family: Arial, sans-serif; /* default font */
+  line-height: 1.6;           /* text line spacing */
+}
+
+/* 3️⃣  CLASS SELECTOR – .classname */
+.container {
+  width: 80%;               /* 80% of page width */
+  margin: auto;             /* center horizontally */
+  padding: 20px;
+  background: #ffffff;      /* white box */
+  border: 1px solid #ddd;   /* light gray border */
+  border-radius: 10px;      /* rounded corners */
+}
+
+/* 4️⃣  ID SELECTOR – #idname */
+#mainHeading {
+  color: #0077cc;           /* blue text */
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* 5️⃣  TEXT & FONT PROPERTIES */
+p {
+  color: #333;              /* dark text */
+  font-size: 16px;
+  font-weight: 400;         /* normal weight */
+  text-align: justify;      /* equal left-right edges */
+  text-decoration: none;    /* remove underline etc. */
+}
+
+/* 6️⃣  COLORS EXAMPLES */
+.color-demo {
+  color: red;                 /* name */
+  background-color: rgb(200,200,255); /* rgb */
+  border: 2px solid #00ff00;  /* hex code */
+}
+
+/* 7️⃣  BOX MODEL – margin, border, padding, content */
+.box-model {
+  width: 200px;
+  padding: 20px;           /* space inside box */
+  border: 5px solid black; /* border */
+  margin: 30px;            /* space outside box */
+  background: #e0e0e0;
+}
+
+/* 8️⃣  DISPLAY & POSITIONING */
+.inline-block {
+  display: inline-block;   /* behave like text but allow width/height */
+  width: 150px;
+  height: 50px;
+  background: orange;
+}
+
+.position-demo {
+  position: relative;      /* base for absolutely positioned child */
+}
+
+.position-demo .child {
+  position: absolute;      /* relative to parent */
+  top: 10px;
+  left: 10px;
+  background: yellow;
+}
+
+/* 9️⃣  FLEXBOX BASIC */
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* items ke beech equal gap */
+  align-items: center;            /* vertically center */
+}
+
+.flex-item {
+  background: lightblue;
+  padding: 20px;
+  margin: 5px;
+}
+
+/* 🔟  HOVER EFFECT */
+.button {
+  background: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease; /* smooth effect */
+}
+.button:hover {
+  background: #005999;            /* on mouse hover */
+}
+
+/*#FOR COLOURING WITH HELP OF CSS*/
+
+/* =======================================================
+   ALL BASIC CSS + COLOR FORMATS EXPLAINED
+   File: colors-demo.ccs
+   ======================================================= */
+
+/* Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+}
+
+/* -----------------------------
+   1️⃣ COLOR NAMES
+   ----------------------------- */
+.color-name {
+  /* Direct color names (CSS predefined) */
+  color: red;          /* text red */
+  background: blue;    /* background blue */
+}
+
+/* -----------------------------
+   2️⃣ HEX CODE (#RRGGBB OR #RGB)
+   ----------------------------- */
+.color-hex {
+  color: #ff0000;      /* pure red */
+  background: #00ff00; /* pure green */
+  border: 2px solid #0000ff; /* pure blue border */
+  /* short hex example */
+  box-shadow: 0 0 10px #333; /* dark gray shadow */
+}
+
+/* -----------------------------
+   3️⃣ RGB (Red, Green, Blue)
+   ----------------------------- */
+.color-rgb {
+  /* rgb(red,green,blue) each 0–255 */
+  color: rgb(255, 0, 0);            /* red */
+  background: rgb(0, 128, 255);     /* light blue */
+  border: 3px solid rgb(34, 139, 34); /* forest green border */
+}
+
+/* -----------------------------
+   4️⃣ RGBA (RGB + Alpha for transparency)
+   ----------------------------- */
+.color-rgba {
+  /* last value is alpha: 0.0 (transparent) to 1.0 (opaque) */
+  background: rgba(255, 0, 0, 0.5);   /* semi-transparent red */
+  color: rgba(0, 0, 0, 0.8);          /* slightly transparent black text */
+  border: 2px solid rgba(0, 0, 255, 0.3); /* blue border with 30% opacity */
+}
+
+/* -----------------------------
+   5️⃣ HSL (Hue, Saturation, Lightness)
+   ----------------------------- */
+.color-hsl {
+  /* hsl(hue, saturation%, lightness%) */
+  background: hsl(200, 100%, 50%);   /* bright sky blue */
+  color: hsl(0, 0%, 20%);            /* dark gray text */
+}
+
+/* -----------------------------
+   6️⃣ HSLA (HSL + Alpha)
+   ----------------------------- */
+.color-hsla {
+  background: hsla(120, 60%, 50%, 0.4); /* semi-transparent green */
+  color: hsla(0, 0%, 10%, 0.9);         /* almost opaque dark text */
+}
+
+/* -----------------------------
+   7️⃣ GRADIENTS (BONUS)
+   ----------------------------- */
+.gradient-bg {
+  /* linear gradient with multiple color formats */
+  background: linear-gradient(
+    to right,
+    #ff7e5f,
+    rgb(255, 200, 55),
+    rgba(0, 128, 255, 0.8)
+  );
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Basic box for each demo */
+.demo-box {
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
