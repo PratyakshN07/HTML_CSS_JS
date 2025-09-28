@@ -19,3 +19,46 @@ Multi
 Line 
 Comment
 */
+
+//4. Data types in JavaScript
+
+//A. Numbers
+var num1 = 900;
+var num2 = 100;
+
+//B. String
+var str1 = "This is a string";
+var str2 = "This is also a string";
+
+//C. Objects
+var marks = {
+  ajay: 34,
+  piyush: 76,
+  om: 99.8,
+};
+console.log(marks);
+
+//5. Booleans
+var a = true;
+var b = false;
+console.log(a, b);
+
+//6. Undefined
+var und;
+console.log(und);
+
+var n = null;
+console.log(n);
+
+/*
+At a very high level,there are 2 types of datatype in JavaScript
+1-Primitive Datatypes:undefined, null, number, string, boolean, symbol
+2-Reference Datatypes:Arrays and Objects
+
+*/
+
+//6. Arrays
+var arr = [1, 2, "Three", 4, 5, 6];
+console.log(arr[2]);
+console.log(arr[0]);
+console.log(arr);
